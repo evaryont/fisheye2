@@ -1,0 +1,10 @@
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+  Exclude:
+    - bin/**
+    - db/schema.rb
+
+LineLength:
+  Max: 120

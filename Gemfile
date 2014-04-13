@@ -56,3 +56,6 @@ end
 gem 'brakeman'
 gem 'sdoc', '~> 0.4.0', require: false
 gem 'inch', require: false
+gem 'rails_best_practices', require: false
+gem 'rubocop', require: false
+gem 'reek', require: false
