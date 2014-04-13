@@ -1,6 +1,6 @@
 namespace :brakeman do
 
-  desc "Run Brakeman"
+  desc "Run Brakeman, the basic security scanner"
   task :run, :output_files do |t, args|
     require 'brakeman'
 
