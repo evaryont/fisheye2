@@ -24,7 +24,6 @@
 # **`confirmed_at`**            | `datetime`         |
 # **`confirmation_sent_at`**    | `datetime`         |
 # **`unconfirmed_email`**       | `string(255)`      |
-# **`role`**                    | `integer`          |
 #
 # ### Indexes
 #
@@ -39,11 +38,4 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
-  enum role: [:user, :vip, :admin]
-  after_initialize :set_default_role, :if => :new_record?
-
-  def set_default_role
-    self.role ||= :user
-  end
-
 end

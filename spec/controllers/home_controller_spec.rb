@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe HomeController do
 
-  describe "GET 'index'" do
-    it "should be successful" do
+  describe "unauthenticated" do
+    it "should redirect to login_path" do
       get 'index'
-      response.should be_success
+      response.should redirect_to(login_path)
     end
   end
 
