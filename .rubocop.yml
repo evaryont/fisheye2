@@ -5,6 +5,11 @@ AllCops:
   Exclude:
     - bin/**
     - db/schema.rb
+    - db/migrate/*
 
 LineLength:
   Max: 120
+
+Documentation:
+  Exclude:
+    - app/controllers/*

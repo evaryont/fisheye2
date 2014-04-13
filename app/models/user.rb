@@ -33,6 +33,8 @@
 #     * **`reset_password_token`**
 #
 
+# A user. This is a person who has registered with the site and we're offering
+# their identity to other machines that ask for it, over some HTTP protocol.
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
