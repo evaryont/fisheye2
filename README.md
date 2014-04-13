@@ -4,6 +4,8 @@ Fisheye2
 [![Code Climate](https://codeclimate.com/github/evaryont/fisheye2.png)](https://codeclimate.com/github/evaryont/fisheye2)
 [![Build Status](https://travis-ci.org/evaryont/fisheye2.svg?branch=master)](https://travis-ci.org/evaryont/fisheye2)
 
+[Security is monitored by Hakiri](https://hakiri.io/github/evaryont/fisheye2/master).
+
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
 provided by the [RailsApps Project](http://railsapps.github.io/).
 
