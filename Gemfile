@@ -18,36 +18,27 @@ gem 'devise_invitable'
 gem 'pundit'
 gem 'simple_form'
 gem 'slim-rails'
-gem 'annotate', "~> 2.6.3"
 
 group :production do
   gem 'unicorn'
 end
 
 group :development do
+  gem 'annotate', "~> 2.6.3"
+  gem 'thin'
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :mri_21, :rbx]
-  gem 'guard-bundler'
-  gem 'guard-rails'
-  gem 'guard-rspec'
   gem 'quiet_assets'
-  gem 'rails_layout'
-  gem 'rb-fchange', :require=>false
-  gem 'rb-fsevent', :require=>false
-  gem 'rb-inotify', :require=>false
-end
-
-group :development, :test do
+  gem 'rails-dev-tweaks', '~> 1.1'
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'jazz_hands'
-  gem 'rspec-rails'
-  gem 'thin'
 end
 
 group :test do
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner', '1.0.1'
   gem 'email_spec'
