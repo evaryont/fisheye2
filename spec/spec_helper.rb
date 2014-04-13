@@ -9,8 +9,10 @@ require 'rspec/autorun'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
-  config.include(EmailSpec::Helpers)
-  config.include(EmailSpec::Matchers)
+  config.include EmailSpec::Helpers
+  config.include EmailSpec::Matchers
+  config.include Devise::TestHelpers, :type => :controller
+  config.include FactoryGirl::Syntax::Methods
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -27,11 +29,22 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
-  
+
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
-    FactoryGirl.lint
+    begin
+      # Run FactoryGirl's lint, which creates every factory, then calls #valid?
+      # on each. This creates a bunch of records. This is basically a test unto
+      # itself.
+      DatabaseCleaner.start
+      FactoryGirl.lint
+    ensure
+      # So make sure we clean out those records before running the actual test
+      # suite
+      DatabaseCleaner.clean
+    end
   end
+  
   config.before(:each) do
     DatabaseCleaner.start
   end

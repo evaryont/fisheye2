@@ -37,19 +37,7 @@
 #
 
 Fisheye2::Application.routes.draw do
-  #root :to => "home#index"
-  devise_for :users, :controllers => {:registrations => 'registrations'}
+  root :to => "home#index"
+  devise_for :users, :controllers => {:registrations => "registrations"}
   resources :users
-
-  unauthenticated :user do
-    devise_scope :user do
-      root to: 'devise/sessions#new', as: 'root_unauth'
-    end
-  end
-
-  authenticated do
-    devise_scope :user do
-      root to: 'users#index', as: 'root'
-    end
-  end
 end
