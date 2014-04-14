@@ -1,6 +1,6 @@
 //
 // Colors from http://clrs.cc/
-
+// ---------------------------
 // Cool
 $aqua:  #7FDBFF;
 $blue:  #0074D9;
@@ -24,5 +24,10 @@ $silver: #ddd;
 $gray:   #aaa;
 $black:  #111;
 
+//
+// Bootstrap overrides
+// -------------------
 $link-color: $blue;
 $link-hover-color: $orange;
+$input-color: $black;
+$input-border-focus: $purple;
