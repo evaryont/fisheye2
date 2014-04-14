@@ -36,8 +36,6 @@
 # A user. This is a person who has registered with the site and we're offering
 # their identity to other machines that ask for it, over some HTTP protocol.
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :invitable, :database_authenticatable, :registerable, :confirmable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :invitable, :database_authenticatable, :confirmable, :lockable,
+         :recoverable, :rememberable, :trackable, :validatable, :timeoutable
 end
