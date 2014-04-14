@@ -108,3 +108,17 @@ menu[label='devise'] {
     content: "";
   }
 }
+
+.navbar .navbar-brand {
+  background-image: none, url(asset-path('babelfish.svg'));
+  background-size: 32px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 36px;
+}
+
+.authform .fisheye-logo {
+  float: right;
+  height: 80px;
+  width: 80px;
+}
