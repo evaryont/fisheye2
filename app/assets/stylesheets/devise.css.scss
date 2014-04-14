@@ -1,0 +1,61 @@
+// Styles for Devise views using Bootstrap
+
+.authform {
+  padding-top: 30px;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.authform form {
+  @extend .well;
+  @extend .well-lg;
+  padding-bottom: 40px;
+}
+.authform .right {
+  float: right !important;
+}
+.authform .button {
+  @extend .btn;
+  @extend .btn-primary;
+}
+.authform fieldset {
+  @extend .well;
+}
+#error_explanation {
+  @extend .alert;
+  @extend .alert-danger;
+}
+#error_explanation h2 {
+  font-size: 16px;
+}
+.button-xs {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-xs;
+}
+
+input[type='checkbox'], input[type='radio'] {
+  margin: 4px;
+}
+
+// Horizontally lay out the extra links at the bottom of the user account forms,
+// along with a bullet between each one
+menu[label='devise'] {
+  li {
+    display: inline;
+    list-style-type: none;
+  }
+  li:before {
+    content: "\2022";
+    padding: 0.4em;
+  }
+
+  li:first-child:before {
+    content: "";
+  }
+}
+
+.authform .fisheye-logo {
+  float: right;
+  height: 80px;
+  width: 80px;
+}

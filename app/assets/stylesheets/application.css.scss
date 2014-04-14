@@ -10,6 +10,48 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
+// Temporary workaround for Rails 4.1.2 pending releaase of bootstrap-sass
+// 3.1.2. See https://github.com/twbs/bootstrap-sass/issues/578 for more
+// information
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.eot"
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.svg"
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.ttf"
+//= depend_on_asset "bootstrap/glyphicons-halflings-regular.woff"
+
+@import 'colors';
+
+// I use bootstrap on this project
+@import "bootstrap";
+
+@import "devise";
+
+main {
+  @extend .container;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 51px; // accommodate the navbar
+}
+
+section {
+  @extend .row;
+  margin-top: 20px;
+}
+
+body {
+  background-color: #eee;
+}
+
+.navbar .navbar-brand {
+  background-image: none, url(asset-path('babelfish.svg'));
+  background-size: 32px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 36px;
+}
+
+a {
+  transition: color .3s ease-in-out;
+}
