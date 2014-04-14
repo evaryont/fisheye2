@@ -87,3 +87,24 @@ body {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+
+input[type='checkbox'], input[type='radio'] {
+  margin: 4px;
+}
+
+// Horizontally lay out the extra links at the bottom of the user account forms,
+// along with a bullet between each one
+menu[label='devise'] {
+  li {
+    display: inline;
+    list-style-type: none;
+  }
+  li:before {
+    content: "\2022";
+    padding: 0.4em;
+  }
+
+  li:first-child:before {
+    content: "";
+  }
+}
