@@ -1,10 +1,13 @@
-h2
-  | Resend confirmation instructions
-= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
-  = f.error_notification
-  = f.full_error :confirmation_token
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-  .form-actions
-    = f.button :submit, "Resend confirmation instructions"
-= render "devise/shared/links"
+.authform
+  = simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+    h3 Resend confirmation instructions
+    p We'll resend your confirmation token.
+    = f.error_notification
+    = devise_error_messages!
+    = f.full_error :confirmation_token
+    .form-group
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+    .form-actions
+      = f.button :submit, "Send instructions"
+  = render "devise/shared/links"
