@@ -11,7 +11,7 @@ html
     == render 'layouts/favicon'
   body
     header
-      - user_signed_in?
+      - if user_signed_in?
         == render 'layouts/navigation'
     main[role="main"]
       == render 'layouts/messages'
