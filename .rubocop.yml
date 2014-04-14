@@ -4,8 +4,11 @@ AllCops:
     - config.ru
   Exclude:
     - bin/**
-    - db/schema.rb
     - db/migrate/*
+    - db/schema.rb
+    - log/**
+    - tmp/**
+    - vendor/**
 
 LineLength:
   Max: 120
