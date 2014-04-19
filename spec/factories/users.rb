@@ -39,8 +39,9 @@ FactoryGirl.define do
   factory :user do
     name 'Test User'
     email 'example@example.com'
-    password 'changeme'
-    password_confirmation 'changeme'
+    # This password needs to be complex enough to pass zxcvbn!
+    password 'a5L%jas^dfkU3j#w8lk@asdfo!ja`slLfJAsd1fJ'
+    password_confirmation 'a5L%jas^dfkU3j#w8lk@asdfo!ja`slLfJAsd1fJ'
     # required if the Devise Confirmable module is used
     confirmed_at Time.now
   end
