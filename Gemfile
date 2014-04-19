@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 
 gem 'pg'
+gem 'puma'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'devise_invitable'
@@ -46,7 +47,6 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'jazz_hands'
   gem 'rspec-rails'
-  gem 'thin'
 end
 
 group :test do
