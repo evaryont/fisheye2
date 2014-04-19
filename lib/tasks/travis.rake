@@ -1,2 +1,2 @@
 desc 'Run a full test suite, used by Travis-CI'
-task :travis => %w[spec brakeman:run rubocop]
+task :travis => %w[db:migrate db:test:prepare spec brakeman:run rubocop]
