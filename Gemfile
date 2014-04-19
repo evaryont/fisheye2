@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass'
 
-gem 'sqlite3'
+gem 'pg'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'devise_invitable'

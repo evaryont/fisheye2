@@ -1,0 +1,6 @@
+# Database credentials used for Travis CI
+test:
+  adapter: postgresql
+  database: travis_ci_fisheye
+  username: postgres
+  encoding: unicode

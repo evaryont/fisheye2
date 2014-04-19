@@ -1,7 +1,12 @@
 language: ruby
+cache: bundler
+addons:
+    postgresql: "9.2"
 rvm:
 # - 2.1.0
   - 2.0.0
 bundler_args: --without production
+before_script:
+  - psql -c 'create database travis_ci_fisheye;' -U postgres
+  - cp config/database.travis.yml config/database.yml
 script: RAILS_ENV=test bundle exec rake travis
-cache: bundler
